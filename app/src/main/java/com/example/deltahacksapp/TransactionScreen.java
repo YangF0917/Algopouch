@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import android.app.Activity;
@@ -47,5 +48,7 @@ public class TransactionScreen extends AppCompatActivity {
 
         trans = (ListView) findViewById(R.id.transactionList);
         receipt = res.getStringArray(R.array.transactionList);
+
+        trans.setAdapter(new ArrayAdapter<String>(this, R.layout.transaction_layout, receipt));
     }
 }
