@@ -1,4 +1,4 @@
-package  com.example.deltahacksapp.ui.login;
+package com.example.deltahacksapp.ui.login;
 
 import androidx.annotation.Nullable;
 
