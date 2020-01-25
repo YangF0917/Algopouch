@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.deltahacksapp.R;
+import com.example.deltahacksapp.TransactionScreen;
 import com.example.deltahacksapp.ui.login.LoginViewModel;
 import com.example.deltahacksapp.ui.login.LoginViewModelFactory;
 
@@ -122,10 +124,15 @@ public class LoginActivity extends AppCompatActivity {
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         // TODO : initiate successful logged in experience
+        openTransactionScreen();
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+    public void openTransactionScreen(){
+        Intent openTransaction = new Intent(this, TransactionScreen.class);
+        startActivity(openTransaction);
     }
 }
