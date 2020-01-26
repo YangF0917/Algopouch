@@ -38,6 +38,9 @@ import com.example.deltahacksapp.ui.login.LoginViewModelFactory;
 public class TransactionScreen extends AppCompatActivity {
     ListView trans;
     String[] receipt;
+    String[] amount;
+    String[] description;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +51,13 @@ public class TransactionScreen extends AppCompatActivity {
 
         trans = (ListView) findViewById(R.id.transactionList);
         receipt = res.getStringArray(R.array.transactionList);
+        amount =  res.getStringArray(R.array.transactionList);
+        description = res.getStringArray(R.array.transactionList);
 
-        trans.setAdapter(new ArrayAdapter<String>(this, R.layout.transaction_layout, receipt));
+        ReceiptAdapter receiptAdapter = new ReceiptAdapter(this, receipt, amount, description);
+        trans.setAdapter(receiptAdapter);
+
     }
 }
+
+
