@@ -11,7 +11,12 @@
     <string name="login_failed">"Login failed"</string>
 
     <string-array name="transactionList">
-        <item>Test transaction 1</item>
+        <item>cf78b79e7281534c36023e5340785d04    01/26/2020</item>
+        <item>de4dfaf3d08fb4b87512207a449fbd57    01/26/2020</item>
+        <item>8fad38f577d92582420f76009c795d0a    01/25/2020</item>
+        <item>f6d280dc60d99a2572ca35f0f453ffc3    01/25/2020</item>
+        <item>de4dfaf3d08fb4b87512207a449fbd54    01/25/2020</item>
+        <item>cf78b79e7281534c36023e5340785d07    01/25/2020</item>
     </string-array>>
 
     <string-array name="sender">

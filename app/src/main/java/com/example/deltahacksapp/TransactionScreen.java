@@ -32,6 +32,7 @@ public class TransactionScreen extends AppCompatActivity {
         description = res.getStringArray(R.array.transactionList);
         layout = new Button[receipt.length];
 
+        /*
         for (int i = 0; i < layout.length; i++){
             layout[i] = new Button(this);
             layout[i].setWidth(100);
@@ -40,6 +41,7 @@ public class TransactionScreen extends AppCompatActivity {
             layout[i].setOnClickListener(btnClicked);
             trans.addView(layout[i]);
         }
+        */
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_activated_1, receipt);
         trans.setAdapter(adapter);
         //ReceiptAdapter receiptAdapter = new ReceiptAdapter(this, receipt, amount, description);
