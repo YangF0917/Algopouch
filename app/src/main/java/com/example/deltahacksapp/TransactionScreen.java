@@ -2,6 +2,7 @@ package com.example.deltahacksapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
